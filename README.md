@@ -1,2 +1,2 @@
 # portfolio-content
-SI539 Project Checkpoint 1
+SI539 Project Checkpoint 2
