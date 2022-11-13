@@ -1,4 +1,23 @@
+/*===================Motion===========================*/
+.personal{
+  animation-duration: 0.5s;
+  animation-name: vibrate;
+}
 
+
+  @keyframes vibrate {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-1deg); }
+  20% { transform: rotate(1deg); }
+  30% { transform: rotate(0deg); }
+  40% { transform: rotate(1deg); }
+  50% { transform: rotate(-1deg); }
+  60% { transform: rotate(0deg); }
+  70% { transform: rotate(-1deg); }
+  80% { transform: rotate(1deg); }
+  90% { transform: rotate(0deg); }
+  100% { transform: rotate(-1deg); }
+}
 /*=======================grid layout================================*/
 
 
@@ -96,7 +115,6 @@ h2{
 	height:400px;
 	margin: auto;
 	padding: 50px 10px 50px 0;
-  border: 5px white solid;
   transition: transform .5s;
 }
 .personal:hover{
@@ -298,7 +316,11 @@ grid-column: 2/span 3;
 /*==================Reduce motion=============================================*/
 
 @media (prefers-reduced-motion) {
-.personal, .image-gallery li img{
+.personal{
   animation: none;
 }
+
+
+
+
 }
