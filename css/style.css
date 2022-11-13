@@ -34,7 +34,7 @@
 .gallery-1 {
   background-image: url('../images/Gallery-background.png');
   background-size:contain;
-  background-position-x: center fixed;
+  background-position-x: center;
   background-position-y: 900px;
   
 }
