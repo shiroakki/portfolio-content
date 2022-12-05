@@ -4,20 +4,34 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/logo.png">
+    <link rel="icon" href="images/favicon.ico">
     <title>Internships</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-   
 </head>
 
-<body>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D3JFY40LNJ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
+    gtag('config', 'G-D3JFY40LNJ');
+</script>
+
+<body>
+    <a class="skip" href="#main-content">Skip to Main Content</a> 
     <nav class="navbar">
-        <a class="active" href="./index.html"><i class="fa fa-fw fa-home"></i> Back to Home</a>
+        <a  href="./index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="./gallery.html"><i class="fa fa-fw fa-search"></i> Gallery</a>
+        <a href="./internship.html"><i class="fa fa-fw fa-envelope"></i> Internship Experience</a>
+        <a href="#" class="active"><i class="fa fa-fw fa-user"></i> Arts and Design works</a>
     </nav>
-    <main>
+    <!-- <nav class="navbar">
+        <a class="active" href="./index.html"><i class="fa fa-fw fa-home"></i> Back to Home</a>
+    </nav> -->
+    <main >
 
         <header id="Design">
             <h1><span style="color:#04006f">Arts</span><br />&
@@ -29,7 +43,7 @@
             <br>
             Below are some of my art collections that marked my creative process.
         </p>
-        <h2>
+        <h2 id="main-content">
             Photography
         </h2>
         <p>
@@ -41,17 +55,17 @@
         </p>
 
         <figure class="wrapper">
-            <ul class="image-gallery" >
-                <li> <img src="images/photography1.jpg" alt="Photography1"/></li>
-                <li> <img src="images/photography2.jpg" alt="Photography2"/></li>
-                <li> <img src="images/photography3.jpg" alt="Photography3"/></li>
+            <ul class="image-gallery">
+                <li> <img src="images/photography1.jpg" alt="Photography1" /></li>
+                <li> <img src="images/photography2.jpg" alt="Photography2" /></li>
+                <li> <img src="images/photography3.jpg" alt="Photography3" /></li>
             </ul>
-           
+
         </figure>
 
-        <h2>
+        <h2 >
             Painting
-        </h2>
+        </h2  >
         <p>
             I observe and feel the way the texture of canvas and my paint brush interact through painting. I started
             <br>
@@ -71,8 +85,8 @@
 
         <figure class="wrapper">
             <ul class="image-gallery">
-                <li> <img src="images/oil-paint.jpg" alt="Oil Painting"/></li>
-                <li> <img src="images/procreate-artwork.jpg" alt="Procreate painting"/></li>
+                <li> <img   src="images/oil-paint.jpg" alt="Oil Painting" /></li>
+                <li> <img src="images/procreate-artwork.jpg" alt="Procreate painting" /></li>
 
             </ul>
 
@@ -82,6 +96,6 @@
 
     <footer>
         <p>University of Michigan School of Information <br />
-            &copy; Colleen van Lent, Drew Asselin - Web Design 2019-2020</p>
+            &copy; Renan Chen - Web Design 2022-2023</p>
     </footer>
 </body>

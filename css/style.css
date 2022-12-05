@@ -1,13 +1,39 @@
+/*===================Motion===========================*/
+.personal{
+  animation-duration: 0.5s;
+  animation-name: vibrate;
+}
+
+
+  @keyframes vibrate {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-1deg); }
+  20% { transform: rotate(1deg); }
+  30% { transform: rotate(0deg); }
+  40% { transform: rotate(1deg); }
+  50% { transform: rotate(-1deg); }
+  60% { transform: rotate(0deg); }
+  70% { transform: rotate(-1deg); }
+  80% { transform: rotate(1deg); }
+  90% { transform: rotate(0deg); }
+  100% { transform: rotate(-1deg); }
+}
+
 
 /*=======================grid layout================================*/
-
+/*mobile*/
 
 .grid-body{
     display: grid;
-    grid-template-columns: 10vw 75vw;
+    grid-template-columns: 10vw 75vw 15vw;
 
-    grid-template-rows: 50px repeat(7,200px) 50px;
+    grid-template-rows: 200px repeat(7,200px) 50px;
     grid-gap:30px;
+  }
+
+  .navbar{
+    grid-row: 1/ span 1;
+    grid-column: 1/ span all;
   }
 
   .grid-head, .grid-footer, .grid-main, .grid-aside{
@@ -67,18 +93,18 @@
   transform: scale(1.15);
 }
 
-/*==================MAIN============================================*/
+/*==================MAIN===========================================*/
 
 h1 {
-  font-size:1em;
-	margin:0.67em 0;
+  font-size:4em;
 	color:#353535;
 	text-transform: uppercase;
 	text-align:center;
 }
 
 span{
-  font-size: 4em;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 h2{
@@ -100,27 +126,6 @@ h2{
 }
 .personal:hover{
   transform: scale(1.15);
-}
-
-/*===================Motion===========================*/
-.personal{
-  animation-duration: 0.5s;
-  animation-name: vibrate;
-}
-
-
-  @keyframes vibrate {
-  0% { transform: rotate(0deg); }
-  10% { transform: rotate(-1deg); }
-  20% { transform: rotate(1deg); }
-  30% { transform: rotate(0deg); }
-  40% { transform: rotate(1deg); }
-  50% { transform: rotate(-1deg); }
-  60% { transform: rotate(0deg); }
-  70% { transform: rotate(-1deg); }
-  80% { transform: rotate(1deg); }
-  90% { transform: rotate(0deg); }
-  100% { transform: rotate(-1deg); }
 }
 
 footer p{
@@ -150,6 +155,28 @@ p {
   padding:10px 0 10px 10px;
 }
 
+/*======================INDEX=============================================*/
+.grid-about{
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows:30px repeat(5, 200px) 50px;
+  row-gap: 6px;
+}
+
+.cap{
+  grid-row:1/span 1;
+}
+
+.para1{
+  grid-row: 2/span 1;
+}
+.para2{
+  grid-row:3/span 1;
+}
+
+.personal{
+  grid-row: 4/span 1;
+}
 
 /*==================CONTACT INFO=============================================*/
 section .contact{
@@ -201,6 +228,46 @@ section .contact{
   text-align: center;
 }
 
+
+/*==============================FORM=============================================*/
+form { max-width:420px; margin:50px auto; }
+
+.contact-box{
+  color:black;
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  font-size: 16px;
+  border-radius: 25px;
+  width:100%;
+  line-height: 16px;
+  border:2px solid #5558a0;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.contact-box:focus { border:2px solid #f0db17; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Poppins','Roboto', sans-serif;
+  font-size:18px;
+  width: 100%;
+  background:#3a56d4;
+  border-radius:15px;
+  color: #fff0ff;
+  border:none;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+}
+[type="submit"]:hover { background:#2f3da8; }
+
 /*==================NAVIGATION BAR=============================================*/
   .navbar a {
     font-family: 'Roboto';
@@ -209,7 +276,6 @@ section .contact{
     float: none;
     display: block;
   }
-
 
 
 
@@ -230,14 +296,141 @@ section .contact{
 }
 
 /* Current/active navbar link */
-.active {
-  background-color: #ffffff;
+.navbar .active {
+  background-color:#ffffff;
 }
 
 
-/*==================Responsive=============================================*/
+/*======================skip to main============================================*/
+
+.skip{
+  background: #e77e23;
+    height: 30px;
+    left: 80%;
+    padding: 8px;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+}
+
+.skip:focus{
+  transform: translateY(0%);
+  top: 20%;
+}
+
+
+/*==================Responsive tablet=============================================*/
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media all and (min-width: 700px) and (max-width: 1299px) {
+  .navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: 'Roboto';
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    float: none;
+  }
+
+  .navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: rgb(25, 21, 62);
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  /* Navbar links on mouse-over */
+  .navbar a:hover {
+    background-color: rgb(251, 251, 251);
+    color: #5558a0
+  }
+
+  /* Current/active navbar link */
+  .active {
+    background-color: #ffffff;
+  }
+
+  .image-gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
+  .grid-body {
+    display: grid;
+    grid-template-columns: 5vw 40vw 50vw 5vw;
+    grid-template-rows: 50px 200px 300px 300px 250px 100px;
+    grid-gap: 10px;
+    object-fit: fill;
+  }
+
+  .grid-head,
+  .grid-footer {
+    grid-column: 2/span 1;
+  }
+
+  .grid-head {
+    grid-row: 2/span 1;
+
+  }
+
+  .grid-footer {
+    grid-row: 6/span 1;
+  }
+
+  .grid-main {
+    grid-column: 2 / span 1;
+    grid-row: 3/span 2;
+    justify-self: flex-start;
+  }
+
+  .grid-aside {
+    grid-row: 3/span 1;
+    grid-column: 3/span 1;
+
+  }
+
+  .intern img {
+    max-width: 400px;
+  }
+
+  .grid-about {
+    display: grid;
+    grid-template-columns: 60vw 40vw;
+    overflow: hidden;
+    column-gap: 10px;
+    grid-template-rows: 30px 200px 200px 200px 40px;
+    row-gap: 10px;
+  }
+
+.cap {
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+  }
+
+.para1{
+  grid-column: 1/span 1;
+  grid-row:2 /span 1;
+}
+.para2{
+  grid-column: 1/span 1;
+  grid-row: 3/span 1;
+}
+
+  .personal {
+    grid-column: 2/span 1;
+    grid-row: 2/span 2;
+    overflow: hidden;
+  }
+
+}
+
+
+
+
+
 @media all and (min-width: 1300px) {
 .navbar {
 	display:flex;
@@ -308,8 +501,37 @@ grid-column: 2/span 3;
   max-width: 400px;
 }
 
+.grid-about {
+  display: grid;
+  grid-template-columns: 60vw 40vw;
+  overflow: hidden;
+  column-gap: 10px;
+  grid-template-rows: 30px 200px 200px 200px 40px;
+  row-gap: 10px;
+}
+
+.cap {
+  grid-column: 1/span 1;
+  grid-row: 1/span 1;
+}
+
+.para1 {
+  grid-column: 1/span 1;
+  grid-row: 2 /span 1;
+}
+
+.para2 {
+  grid-column: 1/span 1;
+  grid-row: 3/span 1;
+}
+
+.personal {
+  grid-column: 2/span 1;
+  grid-row: 2/span 2;
 
 }
+
+} 
 
 
 
@@ -321,4 +543,7 @@ grid-column: 2/span 3;
 .personal{
   animation: none;
 }
+
 }
+
+/*==================Javascript=============================================*/

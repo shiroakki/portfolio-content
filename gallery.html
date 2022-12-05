@@ -4,21 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/logo.png">
+    <link rel="icon" href="images/favicon.ico">
     <title>Gallery</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-   
-
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D3JFY40LNJ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-D3JFY40LNJ');
+</script>
+
 <body class="gallery-1">
+    <a class="skip" href="#main-content">Skip to Main Content</a>
     <nav class="navbar">
-        <a class="active" href="./index.html"><i class="fa fa-fw fa-home"></i> Back to Home</a>
+        <a href="./index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#" class="active"><i class="fa fa-fw fa-search"></i> Gallery</a>
+        <a href="./internship.html"><i class="fa fa-fw fa-envelope"></i> Internship Experience</a>
+        <a href="./arts-and-design.html"><i class="fa fa-fw fa-user"></i> Arts and Design works</a>
     </nav>
     <header id="gallery">
-        <h1><span style="color:#04006f">Gallery</span><br />
+        <h1><span style="color:#04006f">Gallery</span>
             <span style="color:#373736">of Renan</span>
         </h1>
     </header>
@@ -41,7 +52,7 @@
 
 
         <figure class="wrapper">
-            <ul class="image-gallery">
+            <ul class="image-gallery" id="main-content">
                 <li>
                     <img src="images/education.jpg" alt="education" />
                 </li>
@@ -73,6 +84,7 @@
 
     <footer>
         <p>University of Michigan School of Information <br />
-            &copy; Colleen van Lent, Drew Asselin - Web Design 2019-2020</p>
+            &copy; Renan Chen - Web Design 2022-2023 
+        </p>
     </footer>
 </body>

@@ -4,11 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.ico">
   <title>Renan Chen - Personal Portfolio SI539</title>
   <!--Theme Style-->
   <link rel="stylesheet" href="css/html5reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <link href="images/logo.png" rel="shortcut icon">
+  <script src="script/script.js"></script>
+  <!-- <link href="images/logo.png" rel="shortcut icon"> -->
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,8 +18,18 @@
 
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D3JFY40LNJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-D3JFY40LNJ');
+</script>
 
 <body>
+  <a class="skip" href="#main-content">Skip to Main Content</a>
   <nav class="navbar">
     <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
     <a href="./gallery.html"><i class="fa fa-fw fa-search"></i> Gallery</a>
@@ -28,9 +40,12 @@
     <!--Header Section-->
     <header id="home">
       <section class="background" id="backgroundimg">
-        <h1><span style="color:#04006f">Ren</span><span
-            style="color:#434a68;">an</span><br/>
+        <!-- <h1><span style="color:#04006f">Ren</span><span style="color:#434a68;">an</span><br />
           <span style="color:#111111">Chen</span>
+        </h1> -->
+        <h2>Adriana Chen 
+          <span class="txt-rotate" data-period="2000"
+            data-rotate='[ "Graphic designer", "UX designer", "UX researcher"]'></span>
         </h1>
       </section>
     </header>
@@ -39,23 +54,29 @@
     <!-- ==========================
                 ABOUT SECTION  
                 =========================== -->
-    <section class="About" id="about">
-      
-            <h2>A little about me</h2><!-- Headline -->
-            <!-- about / welcome text -->
-            <p>Hi, there! I'm Renan Chen, currently a fresh-year graduate student in the Master of Science in <br>
-              Information program at University of Michigan. I had my bachelor's degree in electrical and computer <br>
-              engineering, and now I'm beginning a new life chapter in information studies and design! My primary <br>
-              interests include UX/UI design, graphic design and interaction design. </p>
+    <div class="grid-about">
 
-            <p>This is the official homepage of mine. You can explore more about me on the navigation bar (to be <br>
-              implemented). Besides professional interests, I'm also passionate about life. I love iced coffee and <br>
-              film art. I was in an A cappella chorus group for three years and performed on stages quite often. <br>
-              I also do photography in my spare time. For those details you could check the gallery page!>>></p>
-    </section>
-    <img class="personal" src="images/main-1.jpg" alt="personal photo">
-    <br />
 
+      <h2 class="cap">A little about me</h2><!-- Headline -->
+      <!-- about / welcome text -->
+
+
+      <p class="para1">Hi, there! I'm Renan Chen, currently a fresh-year graduate student in the Master of Science in
+        <br>
+        Information program at University of Michigan. I had my bachelor's degree in electrical and computer <br>
+        engineering, and now I'm beginning a new life chapter in information studies and design! My primary <br>
+        interests include UX/UI design, graphic design and interaction design. </p>
+
+
+      <p class="para2">This is the official homepage of mine. You can explore more about me on the navigation bar (to be
+        <br>
+        implemented). Besides professional interests, I'm also passionate about life. I love iced coffee and <br>
+        film art. I was in an A cappella chorus group for three years and performed on stages quite often. <br>
+        I also do photography in my spare time. For those details you could check the gallery page!>>></p>
+
+      <img class="personal" src="images/main-1.jpg" alt="personal photo" id="main-content">
+      <br />
+    </div>
 
 
 
@@ -69,7 +90,7 @@
           </li>
           <li>
             <i class="fa fa-phone"></i>
-            <p >734-545-9542 </p>
+            <p>734-545-9542 </p>
           </li>
           <li>
             <i class="fa fa-building-o"></i>
@@ -78,11 +99,20 @@
           </li>
         </ul>
       </div>
+      <h2>Leave Your Message</h2>
+      <form action="https://formspree.io/f/mjvzdkgq" method="POST" id="signup">
+        <input id='name' name="name" type="text" class="contact-box" placeholder="Name" />
+        <input id='email' name="email" type="text" class="contact-box" placeholder="Email" />
+        <textarea id='text' name="text" class="contact-box" placeholder="Leave your message here please!"></textarea>
+        <input type="submit" value="SUBMIT"/>
+      </form>
+
+
     </section>
   </main>
   <footer>
     <p>University of Michigan School of Information <br />
-      &copy; Colleen van Lent and Drew Asselin - Web Design 2019-2020</p>
+      &copy; Renan Chen - Web Design 2022-2023</p>
   </footer>
 </body>
 
