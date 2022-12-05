@@ -101,10 +101,17 @@
       </div>
       <h2>Leave Your Message</h2>
       <form action="https://formspree.io/f/mjvzdkgq" method="POST" id="signup">
-        <input label="name" id='name' name="name" type="text" class="contact-box" placeholder="Name" />
-        <input label="email" id='email' name="email" type="text" class="contact-box" placeholder="Email" />
-        <textarea label="text" id='text' name="text" class="contact-box" placeholder="Leave your message here please!"></textarea>
-        <input label="submit" type="submit" value="SUBMIT"/>
+        <label id="nameLabel" for="name"></label>
+        <input id='name' name="name" type="text" class="contact-box" placeholder="Name" />
+
+        <label id="emailLabel" for="email"></label>
+        <input  id='email' name="email" type="text" class="contact-box" placeholder="Email" />
+        <label id="textLabel" for="text"></label>
+
+        <textarea  id='text' name="text" class="contact-box" placeholder="Leave your message here please!"></textarea>
+        <label id="submitLabel" for="submit"></label>
+
+        <input id="submit" type="submit" value="SUBMIT"/>
       </form>
 
 
